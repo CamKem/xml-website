@@ -1,0 +1,56 @@
+<?xml version="1.1" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="products.xsl"?>
+<Products
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="products.xsd"
+>
+    <Product Id="1">
+        <Name>3.5" Serial Port Floppy Disk Drive</Name>
+        <Description>
+            This excellent quality 3.5" floppy disk drive is a must for any computer enthusiast.
+        </Description>
+        <Price>19.99</Price>
+        <Categories>
+            <CategoryId>1</CategoryId>
+            <CategoryId>5</CategoryId>
+        </Categories>
+        <OnHand>10</OnHand>
+    </Product>
+    <Product Id="2">
+        <Name>Parallel Port Brother Dot Matrix Printer</Name>
+        <Description>
+            This Brother dot matrix printer is perfect for printing out those important documents.
+        </Description>
+        <Price>99.99</Price>
+        <SalePrice>79.99</SalePrice>
+        <Categories>
+            <CategoryId>2</CategoryId>
+            <CategoryId>5</CategoryId>
+        </Categories>
+        <OnHand>5</OnHand>
+    </Product>
+    <Product Id="3">
+        <Name>12" VGA CRT Monitor</Name>
+        <Description>
+            This 12" VGA CRT monitor is perfect for any computer enthusiast.
+        </Description>
+        <Price>129.99</Price>
+        <Categories>
+            <CategoryId>3</CategoryId>
+        </Categories>
+        <OnHand>2</OnHand>
+    </Product>
+    <Product Id="4">
+        <Name>Memorex 105-Key Mechanical Keyboard</Name>
+        <Description>
+            This Memorex 105-key mechanical keyboard is perfect for any computer enthusiast.
+        </Description>
+        <Price>49.99</Price>
+        <SalePrice>39.99</SalePrice>
+        <Categories>
+            <CategoryId>4</CategoryId>
+            <CategoryId>5</CategoryId>
+        </Categories>
+        <OnHand>3</OnHand>
+    </Product>
+</Products>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="navbar.xsl"?>
+<Navbar
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="navbar.xsd"
+>
+    <Link href="index.xml">Home</Link>
+    <Link href="products.xml">Products</Link>
+    <Link href="categories.xml">Categories</Link>
+</Navbar>

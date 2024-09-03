@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="categories.xsl"?>
+<Categories
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="categories.xsd"
+>
+    <Category Id="1">
+        <Name>Floppy Disk Drives</Name>
+        <Image>floppy.svg</Image>
+    </Category>
+    <Category Id="2">
+        <Name>Printers</Name>
+        <Image>printer.svg</Image>
+    </Category>
+    <Category Id="3">
+        <Name>Monitors</Name>
+        <Image>monitor.svg</Image>
+    </Category>
+    <Category Id="4">
+        <Name>Keyboards</Name>
+        <Image>keyboard.svg</Image>
+    </Category>
+    <Category Id="5">
+        <Name>Peripherals</Name>
+        <Image>peripherals.svg</Image>
+    </Category>
+</Categories>

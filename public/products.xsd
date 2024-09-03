@@ -1,0 +1,30 @@
+<xs:schema
+        elementFormDefault="qualified"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+    <xs:element name="Products">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Product" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="Name"/>
+                            <xs:element type="xs:string" name="Description"/>
+                            <xs:element type="xs:decimal" name="Price"/>
+                            <xs:element type="xs:decimal" name="SalePrice" minOccurs="0"/>
+                            <xs:element name="Categories">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:unsignedByte" name="CategoryId" maxOccurs="unbounded" minOccurs="0"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element type="xs:int" name="OnHand"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:unsignedInt" name="Id" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
