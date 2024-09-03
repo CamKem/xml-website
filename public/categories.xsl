@@ -19,6 +19,7 @@
     <xsl:include href="head.xsl" />
 
     <xsl:template match="/">
+        <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
         <html>
             <xsl:apply-templates select="document('head.xml')/Head"/>
             <body>

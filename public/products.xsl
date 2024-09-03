@@ -11,30 +11,21 @@
         xml:lang="en"
         version="3.0"
 >
-
     <xsl:output method="html" indent="yes"/>
-    <xsl:variable name="categories" select="document('categories.xml')"/>
+    <xsl:mode on-no-match="shallow-copy"/>
+    <xsl:param name="currentPage" select="'products.xml'"/>
+    <xsl:param name="page" select="'Products'"/>
     <xsl:include href="navbar.xsl"/>
+    <xsl:include href="head.xsl"/>
 
     <xsl:template match="/">
-        <xsl:apply-templates select="Products"/>
-    </xsl:template>
-
-    <xsl:template match="Products">
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
         <html>
-            <head>
-                <meta charset="UTF-8"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-                <title>Products</title>
-                <link rel="stylesheet" href="styles.css"/>
-            </head>
+            <xsl:apply-templates select="document('head.xml')/Head"/>
             <body>
-                <xsl:apply-templates select="document('navbar.xml')/Navbar">
-                    <xsl:with-param name="currentPage" select="'products.xml'"/>
-                </xsl:apply-templates>
+                <xsl:apply-templates select="document('navbar.xml')/Navbar" />
                 <div class="wrapper">
-                    <h1>Products</h1>
+                    <h1><xsl:value-of select="$page"/></h1>
                     <table>
                         <thead>
                             <tr>
@@ -47,7 +38,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <xsl:apply-templates select="Product"/>
+                            <xsl:apply-templates select="//Product"/>
                         </tbody>
                     </table>
                 </div>
@@ -56,6 +47,7 @@
     </xsl:template>
 
     <xsl:template match="Product">
+        <xsl:variable name="categories" select="document('categories.xml')"/>
         <tr>
             <td>
                 <xsl:value-of select="@Id"/>
