@@ -95,6 +95,17 @@ p {
     align-items: center;
 }
 
+/* product */
+.price {
+    font-weight: bold;
+    color: #333;
+}
+
+.old-price {
+    color: #f00;
+    text-decoration: line-through;
+}
+
 .xml-icon {
     aspect-ratio: 1;
     float: left;

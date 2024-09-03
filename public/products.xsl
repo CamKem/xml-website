@@ -23,9 +23,11 @@
         <html>
             <xsl:apply-templates select="document('head.xml')/Head"/>
             <body>
-                <xsl:apply-templates select="document('navbar.xml')/Navbar" />
+                <xsl:apply-templates select="document('navbar.xml')/Navbar"/>
                 <div class="wrapper">
-                    <h1><xsl:value-of select="$page"/></h1>
+                    <h1>
+                        <xsl:value-of select="$page"/>
+                    </h1>
                     <table>
                         <thead>
                             <tr>
@@ -59,16 +61,24 @@
                 <xsl:value-of select="Description"/>
             </td>
             <td>
-                <p class="price">
-                    <xsl:text>$</xsl:text>
-                    <xsl:value-of select="Price"/>
-                </p>
-                <xsl:if test="SalePrice">
-                    <p class="sale-price">
-                        <xsl:text>$</xsl:text>
-                        <xsl:value-of select="SalePrice"/>
-                    </p>
-                </xsl:if>
+                <xsl:choose>
+                    <xsl:when test="SalePrice">
+                        <p class="old-price">
+                            <xsl:text>$</xsl:text>
+                            <xsl:value-of select="Price"/>
+                        </p>
+                        <p class="price">
+                            <xsl:text>$</xsl:text>
+                            <xsl:value-of select="SalePrice"/>
+                        </p>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <p class="price">
+                            <xsl:text>$</xsl:text>
+                            <xsl:value-of select="Price"/>
+                        </p>
+                    </xsl:otherwise>
+                </xsl:choose>
             </td>
             <td>
                 <xsl:value-of select="OnHand"/>
