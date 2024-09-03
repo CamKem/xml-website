@@ -89,6 +89,28 @@ table td {
     margin-left: 0.5em;
 }
 
+p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.xml-icon {
+    aspect-ratio: 1;
+    float: left;
+    margin-right: 0.5em;
+    width: 10em;
+    height: 10em;
+}
+
+h2 {
+    font-size: 1.25em;
+    color: #333;
+    margin: 0;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
+
 /* Navbar styles */
 .navbar {
     width: 100%;
@@ -120,31 +142,6 @@ table td {
 
 .navbar li a:hover {
     background-color: #111;
-}
-
-/* Dropdown styles */
-.dropdown-toggle::after {
-    content: ' ▼';
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    z-index: 1;
-}
-
-.dropdown-menu li {
-    float: none;
-}
-
-.dropdown-menu li a {
-    padding: 12px 16px;
-}
-
-.navbar li:hover .dropdown-menu {
-    display: block;
 }
 
 .active {

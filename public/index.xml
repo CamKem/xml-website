@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<Index
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="index.xsd"
+>
+    <Welcome>
+        <Title>Welcome to the XML Project</Title>
+        <Image src="xml-logo.png" alt="XML Logo"/>
+        <Message>
+            This is a simple project that demonstrates the use of XML and XSLT to create a website. The project includes
+            an XML documents, a schema, and a stylesheet for each page. The XML documents are validated against the schema
+            and transformed using the XSLT stylesheet to generate the HTML output.
+            There is a simple navigation menu at the top of the page that allows you to switch between the different pages.
+            A CSS stylesheet is used to style the HTML output.
+        </Message>
+        <Repository>
+            <Link href="https://github.com/CamKem/xml-project">View the project on GitHub</Link>
+        </Repository>
+    </Welcome>
+</Index>
